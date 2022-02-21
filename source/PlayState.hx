@@ -901,8 +901,16 @@ class PlayState extends MusicBeatState
 
 		opponentStrums = new FlxTypedGroup<StrumNote>();
 		playerStrums = new FlxTypedGroup<StrumNote>();
-
-		// startCountdown();
+       
+        var creditTxt:FlxText = new FlxText(4,healthBarBG.y + 20,0,("Port by ItsVeryfix"), 24);
+        creditTxt.scrollFactor.set();
+        creditTxt.setFormat("VCR OSD Mono", 24, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+        creditTxt.borderColor = FlxColor.BLACK;
+        creditTxt.borderSize = 3;
+        creditTxt.borderStyle = FlxTextBorderStyle.OUTLINE;
+        add(creditTxt);
+		
+        // startCountdown();
 
 		generateSong(SONG.song);
 		#if LUA_ALLOWED
